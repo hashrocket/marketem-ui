@@ -11,14 +11,15 @@
   %body
     %header
       %section.container
-        %h1 Marketem
+        %h1
+          =link_to("Marketem", "#")
         %nav
           %ul
-            %li=link_to("Campaigns", "#")
+            %li=link_to("Campaigns", "#", class: "active")
             %li=link_to("Recipients", "#")
 
         .userlogout
-          %span Alex Tucker
           =link_to("Sign Out", "#")
+          %span Alex Tucker
 
     = yield

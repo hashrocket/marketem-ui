@@ -1,3 +1,73 @@
 @import 'mixins'
 
+body
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
 
+a
+  text-decoration: none
+
+header
+  background: #363639
+  height: 48px
+  h1
+    background: url("/assets/logo_marketem.png") no-repeat
+    display: block
+    float: left
+    width: 109px
+    height: 30px
+    margin-top: 10px
+    text-indent: -9999px
+    a
+      display: block
+      width: 109px
+      height: 30px
+      &:hover
+        color: #ffffff
+  nav
+    float: left
+    margin-left: 20px
+    ul
+      li
+        display: inline-block
+        a
+          font-size: 12px
+          font-weight: bold
+          color: #a1a1a1
+          display: block
+          padding: 16px
+          &:hover
+            color: #ffffff
+            background: #454549
+          &.active
+            color: #ffffff
+            background: #454549
+            border-bottom: 5px solid #bad53d
+            padding-bottom: 17px
+  .userlogout
+    float: right
+    span
+      display: block
+      float: right
+      background: url("/assets/icon_person_gray.png") center left no-repeat
+      font-size: 11px
+      font-weight: bold
+      color: #a1a1a1
+      padding-left: 12px
+      margin: 15px 15px 0 0
+    a
+      font-size: 11px
+      font-weight: bold
+      color: #363639
+      padding: 5px 10px
+      display: block
+      float: right
+      background: #b5c27a
+      margin-top: 10px
+      +border-radius(3px)
+      &:hover
+        background: lighten(#b5c27a, 10%)
+
+
+.container
+  margin: 0 auto
+  width: 920px
