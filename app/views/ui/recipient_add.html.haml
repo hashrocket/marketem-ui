@@ -1,0 +1,44 @@
+.container
+  %h1
+    Add a Recipient
+    %span All fields are required.
+
+.bodycontent
+  %section.container
+
+    %form
+      %dl
+        %dt
+          %label First Name
+        %dd
+          %input(type="text")
+        %dt
+          %label Last Name
+        %dd
+          %input(type="text")
+        %dt.clear
+          %label Phone Number
+        %dd
+          %input(type="text")
+        %dt
+          %label.error ZIP Code can&rsquo;t be blank.
+        %dd
+          %input(type="text")
+        %dt.clear
+          %label Gender
+        %dd
+          %select
+            %option Select
+        %dt Birthdate
+        %dd
+          %select
+            %option Month
+          %select
+            %option Day
+          %select
+            %option Year
+        .savecancel
+          %input(type="submit" value="Save" class="lightgreenbutton")
+          %input(type="reset" value="Reset" class="cancel")
+
+        =link_to("Delete Campaign", "#", class: "delete")

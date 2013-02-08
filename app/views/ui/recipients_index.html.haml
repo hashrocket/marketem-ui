@@ -1,0 +1,32 @@
+.container
+  %h1 Recipients
+  =link_to("Add a Recipient", "#")
+
+.bodycontent
+  %section.container
+
+    %section.fullwidth
+      %table
+        %tr
+          %th
+            Recipient
+          %th
+            Age
+          %th
+            Gender
+          %th
+            Phone Number
+          %th
+            State
+        - 3.times do
+          %tr
+            %td
+              =link_to("Fictional Person", "#")
+            %td
+              35
+            %td
+              Male
+            %td
+              352-444-1111
+            %td
+              FL

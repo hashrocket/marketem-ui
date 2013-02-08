@@ -1,0 +1,35 @@
+.container
+  %h1 Campaigns
+  =link_to("Create a Campaign", "#")
+
+.bodycontent
+  %section.container
+
+    .msg.success
+      %strong Hooray!
+      =link_to("A New Campaign", "#")
+      was successfully added.
+
+    %section.fullwidth
+      %table
+        %tr
+          %th
+            Campaign
+          %th
+            Recipients
+          %th
+            Created
+          %th
+            Sent
+        - 3.times do
+          %tr
+            %td
+              =link_to("Do Abbreviations Annoy You?", "#")
+            %td
+              45 Recipients
+            %td
+              02/03/2013
+            %td
+              12/31/2014
+            %td
+              =link_to("View Reports", "#", class: "bluebutton")
