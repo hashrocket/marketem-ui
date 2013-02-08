@@ -1,16 +1,16 @@
 .container
   %h1 Campaigns
-  =link_to("Create a Campaign", "#")
+  =link_to("Create a Campaign", "#", class: "addbutton")
 
 .bodycontent
   %section.container
 
-    .msg.success
+    .msg_success
       %strong Hooray!
       =link_to("A New Campaign", "#")
       was successfully added.
 
-    %section.fullwidth
+    .tablewrapper
       %table
         %tr
           %th
@@ -21,6 +21,7 @@
             Created
           %th
             Sent
+          %th
         - 3.times do
           %tr
             %td

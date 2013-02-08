@@ -1,15 +1,32 @@
 @import 'mixins'
 
+=msg($color, $icon)
+  background: $color url("/assets/icon_#{$icon}.png") 16px 12px no-repeat
+  border: 1px solid darken($color, 20%)
+  padding: 15px
+  margin-bottom: 20px
+  padding-left: 55px
+  +border-radius(3px)
+  a
+    color: #0d6ea6
+    font-weight: bold
+    &:hover
+      color: darken(#0d6ea6, 10%)
+
 body
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
 
 a
+  color: #0d6ea6
   text-decoration: none
+  &:hover
+    color: darken(#0d6ea6, 10%)
 
 header
   background: #363639
   height: 48px
-  h1
+  margin-bottom: 25px
+  > .container h1.logo
     background: url("/assets/logo_marketem.png") no-repeat
     display: block
     float: left
@@ -67,7 +84,72 @@ header
       &:hover
         background: lighten(#b5c27a, 10%)
 
-
 .container
   margin: 0 auto
   width: 920px
+  h1
+    clear: both
+    float: left
+    font-size: 34px
+    font-weight: bold
+    color: #363639
+    padding-bottom: 20px
+  a.addbutton
+    font-size: 14px
+    font-weight: bold
+    color: #363639
+    background: #b4d618
+    padding: 10px 14px
+    float: right
+    +border-radius(3px)
+
+.bodycontent
+  clear: both
+  background: #f8f8f7
+  border-top: 1px solid #eaeaed
+  border-bottom: 1px solid #eaeaed
+  padding: 20px 0
+  .msg_success
+    +msg(#ebf3c7, checkmark)
+
+.tablewrapper
+  background: #ffffff
+  border: 1px solid #dbdbde
+  padding: 20px
+  +border-radius(3px)
+  table
+    border-collapse: collapse
+    border-spacing: 0
+    width: 100%
+    tr
+      th
+        border-bottom: 1px solid #e7e8e6
+        font-size: 12px
+        font-weight: normal
+        color: #696969
+        text-align: left
+        padding-bottom: 8px
+        &:first-child
+          padding-left: 10px
+      td
+        font-size: 14px
+        color: #7b7b7b
+        &:first-child
+          font-weight: bold
+          color: #0d6ea6
+          padding: 5px
+          padding-left: 10px
+        &:nth-child(2)
+          color: #363638
+        a.bluebutton
+          background: #0d6ea6
+          font-size: 10px
+          line-height: 23px
+          font-weight: bold
+          color: #ffffff
+          text-align: center
+          display: block
+          width: 75px
+          +border-radius(3px)
+          &:hover
+            background: darken(#0d6ea6, 10%)
