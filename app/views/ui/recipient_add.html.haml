@@ -1,4 +1,4 @@
-.container
+.container.heading
   %h1
     Add a Recipient
     %span All fields are required.
@@ -38,7 +38,7 @@
           %select
             %option Year
         .savecancel
-          %input(type="submit" value="Save" class="lightgreenbutton")
+          %input(type="submit" value="Save" class="save")
           %input(type="reset" value="Reset" class="cancel")
 
         =link_to("Delete Campaign", "#", class: "delete")
