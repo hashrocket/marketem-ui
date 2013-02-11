@@ -11,7 +11,6 @@ table
   width: 100%
 
 =th
-  border-top: 1px solid #e7e8e6
   border-bottom: 1px solid #e7e8e6
   font-size: 12px
   font-weight: normal
@@ -124,10 +123,15 @@ header
     font-weight: bold
     color: #363639
     padding-bottom: 20px
+    &.lesspadding
+      padding-bottom: 13px
     span
       font-size: 16px
       color: #7e7c7c
       padding-left: 5px
+  p
+    clear: both
+    margin-bottom: 15px
   a.addbutton
     font-size: 14px
     line-height: 18px
@@ -147,6 +151,11 @@ header
   border-top: 1px solid #eaeaed
   border-bottom: 1px solid #eaeaed
   padding: 20px 0
+  p
+    font-size: 12px
+    color: #363639
+    float: left
+    padding: 4px 10px 0 0
   .msg_success
     +msg(#ebf3c7, checkmark)
   form
@@ -193,6 +202,7 @@ header
       margin-bottom: 10px
       th
         +th
+        border-top: 1px solid #e7e8e6
         &:first-child
           width: 14px
         &:nth-child(2)
