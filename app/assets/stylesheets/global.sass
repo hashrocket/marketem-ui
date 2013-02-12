@@ -16,7 +16,6 @@ table
   font-weight: normal
   color: #696969
   text-align: left
-  padding: 5px 8px
 
 =button
   font-weight: bold
@@ -219,6 +218,7 @@ header
       th
         +th
         border-top: 1px solid #e7e8e6
+        padding: 5px 3px 5px 8px
         &:first-child
           width: 14px
         &:nth-child(2)
@@ -226,14 +226,14 @@ header
       td
         font-size: 12px
         color: #505053
-        padding: 5px 8px
+        padding: 5px 3px 5px 8px
         &:nth-child(2)
           font-weight: bold
     h1
       display: block
       font-size: 16px
       margin: 0 0 10px 6px
-      padding-left: 20px
+      padding-left: 25px
   .addrecipients
     clear: left
     margin-right: 20px
@@ -336,20 +336,20 @@ header
 .tablewrapper
   background: #ffffff
   border: 1px solid #dbdbde
-  padding: 20px
+  padding: 15px
   +border-radius(3px)
   table
     tr
       th
         +th
-        padding: 5px 4px
+        padding: 5px 0
         &:first-child
           width: 455px
-          padding-left: 8px
+          padding-left: 10px
       td
         font-size: 14px
         color: #7b7b7b
-        padding: 5px
+        padding: 5px 0 2px
         &:first-child
           font-weight: bold
           color: #0d6ea6
@@ -371,10 +371,6 @@ header
 .rindex
   table
     tr
-      th
-        padding: 5px 4px
-        &:first-child
-          padding-left: 8px
       td
         color: #363638
 
@@ -395,14 +391,13 @@ header
   color: #363639
   background: #cedd8b
   &:hover
-    background: lighten(#cedd8b, 10%)
+    background: darken(#cedd8b, 10%)
 
 .cancel
   color: #606068
   background: #c8c8cf
   &:hover
-    color: lighten(#606068, 80%)
-    background: darken(#c8c8cf, 10%)
+    background: darken(#c8c8cf, 5%)
 
 .delete
   font-size: 12px
