@@ -7,38 +7,33 @@
   %section.container
 
     %form
-      %dl
-        %dt
-          %label First Name
-        %dd
+      %ul
+        %li
+          %label Full Name
           %input(type="text")
-        %dt
-          %label Last Name
-        %dd
-          %input(type="text")
-        %dt
+        %li.clear
           %label Phone Number
-        %dd
-          %input(type="text")
-        %dt
+          %input(type="text" class="half")
+        %li
           %label.error ZIP Code can&rsquo;t be blank.
-        %dd
-          %input(type="text" class="error_input")
-        %dt
+          %input(type="text" class="half error_input")
+        %li.clear
           %label Gender
-        %dd
-          %select
+          %select(id="gender")
             %option Select
-        %dt Birthdate
-        %dd
+            %option Female
+            %option Male
+        %li
+          %label Birthdate
           %select
             %option Month
           %select
             %option Day
           %select
             %option Year
-        .savecancel
-          %input(type="submit" value="Save" class="save")
-          %input(type="reset" value="Reset" class="cancel")
 
-        =link_to("Delete Campaign", "#", class: "delete")
+      .savecancel
+        %input(type="submit" value="Save" class="save")
+        %input(type="reset" value="Reset" class="cancel")
+
+      =link_to("Delete Recipient", "#", class: "delete")

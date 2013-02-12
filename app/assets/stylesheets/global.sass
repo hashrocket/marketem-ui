@@ -161,22 +161,27 @@ header
   .msg_warning
     +msg(#f7f9d2, warningsign)
   form
-    dl
+    dl, ul
       font-size: 12px
       font-weight: bold
       color: #514f4f
       float: left
+      margin-bottom: 10px
       width: 450px
-      dd
-        margin-bottom: 10px
       &.marginright
         margin-right: 20px
-      label
-        display: block
-        margin-bottom: 3px
-        &.error
-          color: #d54f3d
-    input[type="text"], textarea, select
+    dd, li
+      margin-bottom: 10px
+    li
+      float: left
+      &.clear
+        margin-right: 20px
+    label
+      display: block
+      margin-bottom: 3px
+      &.error
+        color: #d54f3d
+    input[type="text"], textarea
       font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif
       color: #707070
       border: 1px solid #dbdbde
@@ -186,19 +191,21 @@ header
       +border-radius(3px)
       &:focus
         color: #514f4f
-        outline: 1px solid #bed555
         +box-shadow(0 0 5px #e4f0ae)
       &.error_input
         border: 1px solid #d54f3d
         &:focus
-          outline: 1px solid #d54f3d
           +box-shadow(0 0 5px #ffe2e2)
     input[type="text"], textarea
       width: 450px
       max-width: 450px
+      &.half
+        width: 215px
     textarea
       height: 100px
       max-height: 100px
+    #gender
+      width: 215px
   .addrecipients, .recipients
     float: left
     width: 450px
@@ -231,6 +238,7 @@ header
     clear: left
     margin-right: 20px
     a
+      clear: both
       display: block
       font-size: 12px
       line-height: 23px
@@ -261,11 +269,15 @@ header
           font-size: 12px
           color: #505053
           display: inline-block
-          margin-right: 10px
+          margin: 0 10px 0 0
           p
             margin-bottom: 5px
+            font-weight: normal
+            padding: 0
+            float: none
           label
             display: block
+            font-weight: normal
             margin-bottom: 3px
           input[type="checkbox"] + label
             display: inline-block
@@ -367,6 +379,7 @@ header
         color: #363638
 
 .savecancel
+  clear: both
   float: left
 
 .save, .cancel
