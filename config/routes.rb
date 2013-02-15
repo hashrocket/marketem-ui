@@ -1,4 +1,6 @@
 Marketem::Application.routes.draw do
-  root to: 'ui#index'
+  root to: 'pages#home'
   get 'ui(/:action)', controller: 'ui'
+
+  resources :contacts, only: :index
 end

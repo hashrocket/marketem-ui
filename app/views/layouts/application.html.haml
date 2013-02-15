@@ -15,8 +15,7 @@
           =link_to("Marketem", "#")
         %nav
           %ul
-            %li=link_to("Campaigns", "#", class: "active")
-            %li=link_to("Recipients", "#")
+            %li=active_link_to("Contacts", :contacts)
 
         .userlogout
           =link_to("Sign Out", "#")
