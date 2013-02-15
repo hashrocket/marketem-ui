@@ -1,9 +1,15 @@
+require File.expand_path(File.join(File.dirname(__FILE__), "..", "support", "paths"))
+
 And "show" do
   save_and_open_page
 end
 
-Given "I am on the home page" do
-  visit root_path
+Given /^I am on (.+)$/ do |page_name|
+  visit(path_to(page_name))
+end
+
+Then /^I should be on (.+)$/ do |page_name|
+  current_path.should == path_to(page_name)
 end
 
 When /^I follow "(.*?)"$/ do |link_name|

@@ -1,9 +1,30 @@
 .container.heading
   %h1 Recipients
+  =link_to("Add a Contact", :new_contact, class: "addbutton")
 
 .bodycontent
   %section.container
 
-    .msg_warning
+    = render 'layouts/shared_flash'
+
+    .alert
       You don't have any contacts yet.
-      =link_to("Add some contacts now!", "#")
+      =link_to("Add some contacts now!", :new_contact)
+
+    .tablewrapper.rindex
+      %table
+        %tr
+          %th
+            Recipient
+          %th(width="50")
+            Age
+          %th(width="70")
+            Gender
+          %th(width="130")
+            Phone Number
+        - contacts.each do |contact|
+          %tr
+            %td= link_to contact.full_name, "#"
+            %td= contact.age
+            %td= contact.gender
+            %td= contact.phone_number

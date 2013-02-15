@@ -1,0 +1,37 @@
+.container.heading
+  %h1
+    Add a Recipient
+    %span All fields are required.
+
+.bodycontent
+  %section.container
+
+    =form_for contact do |f|
+      %ul
+        %li
+          = f.label :full_name
+          = f.text_field :full_name
+        %li.clear
+          = f.label :phone_number
+          = f.text_field :phone_number
+        %li
+          = f.label :zip_code, "ZIP Code"
+          = f.text_field :zip_code, class: 'half'
+        %li.clear
+          = f.label :gender
+          = f.select :gender, GENDER_OPTIONS,
+            prompt: "Select"
+        %li
+          = f.label :birthdate
+          = f.date_select :birthdate,
+            order: [:month, :day, :year],
+            end_year: (13.years.ago).year,
+            start_year: (Time.now - 100.years).year,
+            default: 13.years.ago
+
+
+      .savecancel
+        = f.submit "Save", class: "save"
+        %input(type="reset" value="Reset" class="cancel")
+
+      =link_to("Delete Recipient", "#", class: "delete")

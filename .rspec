@@ -1,1 +1,3 @@
 --colour
+-I 'app'
+-I 'app/models'
